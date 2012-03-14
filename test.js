@@ -97,3 +97,19 @@ assert(
   , ('colours ' + ('within ' + 'colours'.green + ' within ' + ('colours, ' + 'oh my!'.underline).yellow).red + ' EEEK!').bold
   , 'multiple colours contained within colours'
 )
+
+assert(
+    colorsTmpl.render(
+      '{red}red1{/red}, {red}red2{/red}, {red}red3{/red}'
+    )
+  , 'red1'.red + ', ' + 'red2'.red + ', ' + 'red3'.red
+  , 'multiple occurances of a tag in a single string'
+)
+
+assert(
+    colorsTmpl.render(
+      '\n{red}red1{/red}\n{red}red2{/red}\n{red}red3{/red}\n'
+    )
+  , '\n' + 'red1'.red + '\n' + 'red2'.red + '\n' + 'red3'.red + '\n'
+  , 'multi-line strings'
+)

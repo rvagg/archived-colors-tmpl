@@ -24,7 +24,7 @@ var colors = require('colors')
     })
 
   , translators = types.map(function (type) {
-      var re = new RegExp('\\{' + type + '\\}(.*)\\{/' + type + '\\}')
+      var re = new RegExp('\\{' + type + '\\}(.*?)\\{/' + type + '\\}', 'g')
       return function (str) {
         return str.replace(re, '$1'[type])
       }
