@@ -113,3 +113,11 @@ assert(
   , '\n' + 'red1'.red + '\n' + 'red2'.red + '\n' + 'red3'.red + '\n'
   , 'multi-line strings'
 )
+
+assert(
+    colorsTmpl.render(
+      '\n{red}red1\nred2\nred3{/red}\n'
+    )
+  , '\n' + 'red1\nred2\nred3'.red + '\n'
+  , 'tags can surround multi-line strings'
+)

@@ -5,7 +5,7 @@
     }
   , "name": "colors-tmpl"
   , "description": "Simple templating for applying colors.js to strings"
-  , "version": "0.0.2"
+  , "version": "0.0.3"
   , "homepage": "https://github.com/rvagg/colors-tmpl"
   , "keywords": [ "color", "colour", "colours", "colours", "colors.js", "templating", "templates" ]
   , "repository": {
