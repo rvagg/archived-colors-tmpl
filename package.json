@@ -1,5 +1,8 @@
 {
-    "author": "Rod Vagg <rod@vagg.org> @rvagg"
+    "author": {
+        "name": "Rod Vagg"
+      , "email": "rod@vagg.org"
+    }
   , "name": "colors-tmpl"
   , "description": "Simple templating for applying colors.js to strings"
   , "version": "0.0.1"
@@ -9,16 +12,11 @@
         "type": "git"
       , "url": "git://github.com/rvagg/colors-tmpl.git"
     }
-  , "main": "colors-tmpl.js"
+  , "main": "colors-tmpl"
   , "scripts": {
         "test": "node test.js"
-    }
-  , "engines": {
-        "node": "~0.6.12 || 0.6.12-pre"
     }
   , "dependencies": {
         "colors": "*"
     }
-  , "devDependencies": {}
-  , "optionalDependencies": {}
 }
