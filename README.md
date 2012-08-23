@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/rvagg/colors-tmpl.png)](http://travis-ci.org/rvagg/colors-tmpl)
 # colors-tmpl - Super-simple templating for [colors.js](https://github.com/Marak/colors.js)
 
 ```js
