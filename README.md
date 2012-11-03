@@ -4,15 +4,15 @@
 var colorsTmpl = require('colors-tmpl')
 
 // simple:
-colorsTmpl.render('{red}this should be red{/red}')
+colorsTmpl('{red}this should be red{/red}')
 // same as → 'this should be red'.red
 
 // fancy:
-colorsTmpl.render('lotsa colours: {red}red{/red}, {green}green{/green}, {blue}blue{/blue}, yeehaw!')
+colorsTmpl('lotsa colours: {red}red{/red}, {green}green{/green}, {blue}blue{/blue}, yeehaw!')
 // same as → 'lotsa colours: ' + 'red'.red + ', ' + 'green'.green + ', ' + 'blue'.blue + ', ' + 'yeehaw!'
 
 // fancier:
-colorsTmpl.render(
+colorsTmpl(
       '{bold}colours {red}within {green}colours{/green} within {yellow}colours, {underline}oh my!{/underline}{/yellow}{/red} EEEK!{/bold}'
     )
 // same as → 'colours ' + ('within ' + 'colours'.green + ' within ' + ('colours, ' + 'oh my!'.underline).yellow).red + ' EEEK!').bold

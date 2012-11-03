@@ -39,4 +39,6 @@ var colors = require('colors')
       )
     }
 
+module.exports = render
+// old style:
 module.exports.render = render

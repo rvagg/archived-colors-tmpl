@@ -19,7 +19,7 @@ var colors = require('colors')
     }
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '{red}this should be red{/red}'
     )
   , 'this should be red'.red
@@ -27,7 +27,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '{green}this should be green{/green}'
     )
   , 'this should be green'.green
@@ -35,7 +35,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '{underline}this should be underlined{/underline}'
     )
   , 'this should be underlined'.underline
@@ -43,7 +43,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'partial {red}red{/red} string'
     )
   , 'partial ' + 'red'.red + ' string'
@@ -51,7 +51,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'partial {green}green{/green} string'
     )
   , 'partial ' + 'green'.green + ' string'
@@ -59,7 +59,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'unmatched {green} tag, leave it alone'
     )
   , 'unmatched {green} tag, leave it alone'
@@ -67,7 +67,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'nonsense {foobar} tag, leave it alone'
     )
   , 'nonsense {foobar} tag, leave it alone'
@@ -75,7 +75,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'nonsense, matched {foobar}tag{/foobar}, leave it alone'
     )
   , 'nonsense, matched {foobar}tag{/foobar}, leave it alone'
@@ -83,7 +83,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       'lotsa colours: {red}red{/red}, {green}green{/green}, {blue}blue{/blue}, yeehaw!'
     )
   , 'lotsa colours: ' + 'red'.red + ', ' + 'green'.green + ', ' + 'blue'.blue + ', ' + 'yeehaw!'
@@ -91,7 +91,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '{bold}colours {red}within {green}colours{/green} within {yellow}colours, {underline}oh my!{/underline}{/yellow}{/red} EEEK!{/bold}'
     )
   , ('colours ' + ('within ' + 'colours'.green + ' within ' + ('colours, ' + 'oh my!'.underline).yellow).red + ' EEEK!').bold
@@ -99,7 +99,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '{red}red1{/red}, {red}red2{/red}, {red}red3{/red}'
     )
   , 'red1'.red + ', ' + 'red2'.red + ', ' + 'red3'.red
@@ -107,7 +107,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '\n{red}red1{/red}\n{red}red2{/red}\n{red}red3{/red}\n'
     )
   , '\n' + 'red1'.red + '\n' + 'red2'.red + '\n' + 'red3'.red + '\n'
@@ -115,7 +115,7 @@ assert(
 )
 
 assert(
-    colorsTmpl.render(
+    colorsTmpl(
       '\n{red}red1\nred2\nred3{/red}\n'
     )
   , '\n' + 'red1\nred2\nred3'.red + '\n'
