@@ -17,6 +17,6 @@
         "test": "node test.js"
     }
   , "dependencies": {
-        "colors": "*"
+        "colors": "~0.6.2"
     }
 }
