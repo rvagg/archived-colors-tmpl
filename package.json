@@ -14,7 +14,8 @@
     "colours",
     "colors.js",
     "templating",
-    "templates"
+    "templates",
+    "goatscale"
   ],
   "repository": {
     "type": "git",
@@ -25,6 +26,6 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "colors": "~0.6.2"
+    "colors": "~1.0.2"
   }
 }
